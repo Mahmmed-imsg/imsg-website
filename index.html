@@ -1,0 +1,1470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- IMSG One-Page Site — mobile-optimised, cleaned per latest requests -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>INNOVATION MANAGEMENT STRATEGY GROUP — AI & Digital Transformation Consulting</title>
+  <meta name="description" content="IMSG is a boutique Australian consulting firm helping SMEs adopt AI, deliver digital transformation, and AI-Enabled project management excellence across healthcare, education, food, and construction." />
+  <meta name="theme-color" content="#14b8a6">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+  
+  html {
+  scroll-behavior: smooth;
+}
+
+    :root{
+      /* Palette */
+      --indigo:#3b34a5; --purple:#6d28d9; --teal:#14b8a6; --mint:#86efac; --magenta:#d946ef;
+      --bg:#fff; --text:#0f172a; --muted:#475569; --border:#e2e8f0; --accent:var(--teal); --accent-dark:#0d9488; --surface:#f8fafc;
+      /* Brand sizing */
+      --logoH:60px;          /* desktop logo height */
+      --firmName:10px;       /* firm name text under logo */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";font-size:18px;line-height:1.65}
+    a{color:var(--accent-dark);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    .pill{display:inline-block;padding:6px 12px;border:1px solid var(--border);border-radius:999px;background:#fff;font-size:12px;letter-spacing:.02em;color:var(--muted)}
+
+    /* Header */
+    header{position:sticky;top:0;backdrop-filter:blur(8px);background:rgba(255,255,255,.9);border-bottom:1px solid var(--border);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:90px;padding:6px 0}
+    .brand{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+    .brand .logo-img{height:var(--logoH);width:auto;display:block}
+    .brand .firm-name{font-family:Poppins,Inter,sans-serif;font-weight:700;font-size:var(--firmName);line-height:1;letter-spacing:.2px;color:var(--text)}
+    nav ul{list-style:none;display:flex;gap:20px;padding:0;margin:0}
+    nav a {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 16px;
+      transition: color 0.4s ease, background 0.4s ease;
+    }
+
+    nav a.btn{background:var(--text);color:#fff;padding:10px 14px;border-radius:10px}
+    nav a.btn:hover{background:#111827}
+
+/* === Mobile Hamburger Menu === */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-toggle {
+    display: block;
+    align-self: flex-end;
+    margin-right: 12px;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 15px;
+  }
+
+  nav a.btn {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+
+/* === Gradient Hover + Active Menu Highlight === */
+
+/* General hover gradient for all nav links */
+nav a:hover {
+  background: linear-gradient(90deg, #14b8a6, #6d28d9, #d946ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease;
+}
+
+/* Optional underline effect on hover */
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #14b8a6, #6d28d9, #d946ef);
+  transition: width 0.4s ease;
+  margin-top: 4px;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Active section highlight (when the user scrolls into it) */
+nav a.active {
+  background: linear-gradient(90deg, #14b8a6, #6d28d9, #d946ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+
+    /* Hero */
+    .hero{position:relative;padding:92px 0 64px;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#fff 0%,#fbfdff 100%);overflow:hidden}
+    .hero-art{position:absolute;inset:0;pointer-events:none}
+    .hero-art .d-shape{position:absolute;right:4%;top:-40px;opacity:.85}
+    @media (max-width:900px){.hero-art .d-shape{width:260px;height:260px;right:-56px;top:-10px;opacity:.45}}
+    .hero h1{font-family:Poppins,Inter,sans-serif;font-size:clamp(26px,3.6vw,32px);line-height:1.15;margin:16px 0 16px}
+    .hero p{font-size:18px;color:var(--muted);margin:0 0 24px;max-width:60ch;line-height:1.65}
+
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;font-weight:600;border:1px solid var(--border)}
+    .btn.primary{background:var(--accent);color:#fff;border-color:transparent}
+    .btn.primary:hover{background:var(--accent-dark)}
+    .btn.secondary{background:#fff}
+
+    /* Sections */
+    section{padding:80px 0}
+    .section-title{font-family:Poppins,Inter,sans-serif;font-size:32px;margin:0 0 8px}
+    .section-sub{color:var(--muted);margin-bottom:24px;font-size:20px}
+    .grid{display:grid;gap:20px}
+    .cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .cards-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    @media (max-width:900px){.cards-3,.cards-4{grid-template-columns:1fr}}
+    .card{border:1px solid var(--border);border-radius:20px;padding:24px;background:#fff}
+    .card h3{margin:0 0 6px;font-size:20px}
+    .card p{margin:0;color:var(--muted);font-size:16px;line-height:1.6}
+    .badge{font-size:12px;color:var(--muted)}
+
+    /* Minimal coloured icon blocks (no inner glyphs) */
+    .icon{width:56px;height:56px;border-radius:12px;display:inline-block;margin-bottom:12px;background:#fff}
+    .t-indigo{background:var(--indigo)} .t-purple{background:var(--purple)} .t-teal{background:var(--teal)} .t-mint{background:#22c55e} .t-magenta{background:var(--magenta)}
+    @media (max-width:700px){.icon{width:48px;height:48px}}
+
+    .list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+    .list li{display:flex;gap:10px;align-items:flex-start}
+    .tick{font-weight:700;color:var(--accent-dark)}
+
+    .about{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+
+    /* Contact */
+    .contact{border-top:1px solid var(--border)}
+    .contact .box{border:1px solid var(--border);border-radius:20px;padding:20px;background:#fff}
+    .contact label{display:block;font-size:14px;margin:8px 0 4px}
+    .contact input,.contact textarea{width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);font:inherit}
+    .contact textarea{min-height:120px}
+
+    /* Footer */
+    footer{padding:28px 0;border-top:1px solid var(--border);font-size:14px;color:var(--muted)}
+    .foot-grid{display:grid;gap:12px;grid-template-columns:1fr auto}
+    @media (max-width:700px){.foot-grid{grid-template-columns:1fr}}
+
+    /* Ring chart */
+    .ring-grid{display:grid;grid-template-columns:420px 1fr;gap:24px;align-items:center}
+    .donut{max-width:380px;width:100%;height:auto;display:block}
+    .donut .track{stroke:var(--border)}
+    .kpis span strong{font-weight:700}
+
+    /* Mobile tuning */
+    @media (max-width:900px){
+      body{font-size:16px;line-height:1.6}
+      section{padding:56px 0}
+      .nav{flex-direction:column;align-items:stretch;gap:8px}
+      nav ul{gap:12px;overflow-x:auto;padding:6px 0;-webkit-overflow-scrolling:touch}
+      nav a{font-size:15px;padding:8px 10px;border:1px solid var(--border);border-radius:999px;background:#fff;white-space:nowrap}
+      :root{--logoH:44px;--firmName:10px}
+    }
+/* --- FIX: stop hero artwork overlapping content --- */
+.hero { position: relative; isolation: isolate; overflow: hidden; }   /* new stacking context */
+.hero .container { position: relative; z-index: 2; }                  /* content above art */
+.hero-art { z-index: 0; }                                             /* art behind content */
+
+/* Tame size/position of the ring so it doesn't reach the cards */
+@media (min-width: 901px){
+  .hero-art .d-shape{
+    width: 460px; height: 460px;   /* was ~520 */
+    right: -20px; top: -20px;      /* pull it away from cards */
+    opacity: .60;                  /* a touch softer behind content */
+  }
+}
+/* --- CTA spacing & stacking in hero --- */
+.hero { isolation: isolate; }                        /* keep hero content above artwork */
+.hero .container { position: relative; z-index: 2; } /* ensure CTAs sit on top */
+
+.hero .cta-row { margin: 8px 0 36px; }               /* give breathing room below buttons */
+.hero .grid.cards-3 { margin-top: 8px; }             /* keep first card row slightly lower */
+
+@media (max-width: 700px){
+  .hero .cta-row { margin-bottom: 28px; }            /* a bit less on mobile */
+}/* Smaller, softer placeholders */
+.contact input,
+.contact textarea,
+.contact select { font-size: 16px; }  /* field text size */
+
+.contact ::placeholder { font-size: .9em; color: #94a3b8; }
+.contact :-ms-input-placeholder { font-size: .9em; color: #94a3b8; }   /* IE */
+.contact ::-ms-input-placeholder { font-size: .9em; color: #94a3b8; }  /* Edge (legacy) */
+/* Match selects to inputs + add chevron */
+.contact select{
+  width:100%; padding:12px 40px 12px 12px;
+  border-radius:12px; border:1px solid var(--border);
+  background:#fff; font:inherit; line-height:1.4;
+  appearance:none; -webkit-appearance:none; -moz-appearance:none;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%2390a4ae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>');
+  background-repeat:no-repeat; background-position:right 12px center; background-size:16px;
+}
+/* === Brand: logo left, firm name right (Deloitte-style) === */
+.brand{
+  display:flex;
+  flex-direction:row;              /* was column */
+  align-items:center;
+  gap:12px;                        /* space between logo + name */
+}
+
+.brand .logo-img{
+  height: var(--logoH);            /* keep your logo size variable */
+  width:auto;
+  display:block;
+}
+
+/* Heavy, clean, Deloitte-like sans (uses Poppins 700 already loaded) */
+.brand .firm-name{
+  font-family: Poppins, Inter, sans-serif;
+  font-weight: 700;
+  font-size: clamp(14px, 2.1vw, 22px);  /* responsive: ~14–22px */
+  line-height: 1;
+  letter-spacing: 0.1px;                 /* subtle tracking like Deloitte */
+  color: var(--text);                    /* dark text on light header */
+  white-space: nowrap;                   /* keep on one line on wide screens */
+}
+
+/* Mobile: allow wrap and reduce size so it never crushes the nav */
+@media (max-width:700px){
+  .brand .firm-name{
+    white-space: normal;                 /* allow wrap on small screens */
+    font-size: 14px;
+  }
+}
+
+/* Smaller firm name beside the logo */
+.brand .firm-name{
+  font-size: clamp(12px, 1.6vw, 18px); /* was ~14–22px */
+  line-height: 1;
+}
+
+@media (max-width:700px){
+  .brand .firm-name{ font-size: 13px; } /* mobile tweak */
+}
+/* Select placeholder = grey; real selection = normal text */
+.contact select { color: var(--text); }                 /* default once a value is chosen */
+.contact select:required:invalid { color: #94a3b8; }    /* grey when placeholder is shown */
+.contact select option[value=""] { color: #94a3b8; }    /* placeholder option itself */
+
+/* (keeps visual consistency with input placeholders) */
+.contact ::placeholder { font-size: .8em; color: #94a3b8; }
+
+/* === Unified field/placeholder sizing + grey select placeholders === */
+:root { --fieldText: 16px; --phGrey: #94a3b8; }
+
+.contact input,
+.contact textarea,
+.contact select {
+  font-size: var(--fieldText);     /* same size everywhere */
+}
+
+/* Inputs / textarea placeholders */
+.contact ::placeholder {            /* modern browsers */
+  font-size: var(--fieldText);
+  color: var(--phGrey);
+  opacity: 1;                       /* avoid extra fade differences */
+}
+/* Legacy (safe to include) */
+.contact :-ms-input-placeholder { font-size: var(--fieldText); color: var(--phGrey); }
+.contact ::-ms-input-placeholder { font-size: var(--fieldText); color: var(--phGrey); }
+
+/* Dropdowns: start grey, switch to normal via JS on change */
+.contact select { color: var(--phGrey); }              /* initial = grey */
+.contact select option { color: var(--text); }         /* real options = normal text */
+.contact select option[value=""] { color: var(--phGrey); } /* placeholder option = grey */
+
+/* === Innovation glow animation === */
+.glow-innovation {
+  color: var(--magenta);
+  text-shadow: 0 0 8px rgba(217, 70, 239, 0.6),
+               0 0 12px rgba(217, 70, 239, 0.4),
+               0 0 20px rgba(217, 70, 239, 0.2);
+  animation: glowPulse 3.5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 6px rgba(217,70,239,0.6), 0 0 10px rgba(217,70,239,0.4); }
+  50% { text-shadow: 0 0 14px rgba(217,70,239,0.8), 0 0 24px rgba(217,70,239,0.5); }
+}
+
+/* === Mobile Hero Adjustments === */
+@media (max-width: 700px) {
+  /* Make hero text clearer and avoid overlapping with the circle */
+  .hero h1 {
+    font-size: 22px;
+    line-height: 1.25;
+    margin-top: 12px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  /* Fix "Boutique • Australia • Cross-continental" pill position */
+  .hero .pill {
+    position: relative;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(6px);
+    font-size: 11px;
+    padding: 4px 10px;
+    z-index: 3;
+  }
+
+  /* Resize and reposition the circle artwork */
+  .hero-art .d-shape {
+    width: 300px;
+    height: 300px;
+    right: -40px;
+    top: -10px;
+    opacity: 0.35;
+  }
+
+  /* Slightly increase top padding to separate text from art */
+  .hero {
+    padding-top: 110px;
+    padding-bottom: 60px;
+  }
+}
+
+/* === Snake / Flow Line Scaling for Mobile === */
+@media (max-width: 700px) {
+  svg.d-shape, 
+  #vip-flowline svg {
+    width: 100%;
+    height: auto;
+  }
+
+  #vip-flowline path {
+    stroke-width: 4;       /* slightly thinner but clean */
+    stroke-opacity: 0.9;
+  }
+
+  #vip-flowline text {
+    font-size: 11px;
+  }
+}
+/* === Responsive Navigation Bar === */
+@media (max-width: 900px) {
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  nav a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 15px;
+  }
+
+  nav a.btn {
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  nav a.btn:hover {
+    background: var(--accent-dark);
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 20px;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+/* === HERO OVERLAP FIX — Circle stays behind text on all screens === */
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+.hero-art {
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-art .d-shape {
+  position: absolute;
+  right: -80px;
+  top: -40px;
+  width: 480px;
+  height: 480px;
+  opacity: 0.25; /* soft enough not to clash with text */
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .hero-art .d-shape {
+    width: 320px;
+    height: 320px;
+    right: -40px;
+    top: 20px;
+    opacity: 0.15;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-art .d-shape {
+    width: 280px;
+    height: 280px;
+    right: -30px;
+    top: 60px;
+    opacity: 0.12;
+  }
+}
+
+/* === FLOW LINE VISIBILITY FIX === */
+#vip-flowline path {
+  stroke-opacity: 0.9;
+  stroke-width: 6;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+}
+
+@media (max-width: 700px) {
+  #vip-flowline path {
+    stroke-width: 8;
+    opacity: 1;
+  }
+  #vip-flowline text {
+    font-size: 12px;
+  }
+}
+
+/* === FINAL FIX: HERO TEXT OVERLAP === */
+.hero {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  isolation: isolate;
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+.hero-art {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.hero-art .d-shape {
+  position: absolute;
+  right: -70px;
+  top: -20px;
+  width: 460px;
+  height: 460px;
+  opacity: 0.18;
+  filter: blur(1px);
+}
+
+/* Smaller screens: push circle away & fade more */
+@media (max-width: 900px) {
+  .hero-art .d-shape {
+    right: -40px;
+    top: 50px;
+    width: 340px;
+    height: 340px;
+    opacity: 0.12;
+  }
+}
+@media (max-width: 500px) {
+  .hero-art .d-shape {
+    right: -20px;
+    top: 90px;
+    width: 280px;
+    height: 280px;
+    opacity: 0.08;
+  }
+}
+
+/* === SNAKE / FLOW LINE FINAL VISIBILITY === */
+#vip-flowline path {
+  stroke-width: 8;
+  stroke-opacity: 0.95;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+}
+
+#vip-flowline text {
+  font-size: 14px;
+  fill: #0f172a;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  #vip-flowline svg {
+    height: 120px;
+  }
+  #vip-flowline path {
+    stroke-width: 10;
+    opacity: 1;
+  }
+  #vip-flowline text {
+    font-size: 12px;
+  }
+}
+
+/* === PILOT TARGET PERCENTAGES FIX === */
+@media (max-width: 700px) {
+  .ring-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .donut {
+    width: 260px !important;
+    height: 260px !important;
+    margin: 0 auto;
+  }
+  .ring text {
+    font-size: 14px !important;
+    font-weight: 600;
+  }
+  .kpis li {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+/* === CONTACT BUTTON SIZE FIX === */
+nav a.btn {
+  padding: 8px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  transition: background 0.3s ease;
+}
+nav a.btn:hover {
+  background: var(--accent-dark);
+}
+
+/* === Timeline → ROI Connector Mobile Scaling === */
+#approach-flow path {
+  stroke-opacity: 0.9;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+}
+
+@media (max-width: 700px) {
+  #approach-flow svg {
+    height: 100px;
+  }
+  #approach-flow path {
+    stroke-width: 6;
+  }
+  #approach-flow text {
+    font-size: 12px;
+  }
+}
+
+.kpis strong {
+  color: var(--accent-dark);
+  font-weight: 700;
+  transition: color 0.4s ease;
+}
+.kpis strong.highlight {
+  color: var(--magenta);
+}
+
+  </style>
+</head>
+<body>
+  <a href="#main" class="pill" style="position:absolute;left:-9999px;top:-9999px" onfocus="this.style.left='12px';this.style.top='12px'">Skip to content</a>
+
+  <header>
+    <div class="container nav">
+<div class="brand">
+  <a href="#home" aria-label="IMSG Home">
+    <img class="logo-img" src="assets/logo.png" alt="IMSG" />
+  </a>
+  <div class="firm-name">Innovation Management Strategy Group</div>
+</div>
+
+<!-- === Mobile Navigation Toggle === -->
+
+<nav aria-label="Primary">
+  <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  <ul class="nav-menu">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#approach">How We Help You</a></li>
+    <li><a href="#vip">Venture Innovation</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="btn">Contact</a></li>
+  </ul>
+</nav>
+
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="hero-art" aria-hidden="true">
+        <!-- Deloitte-style abstract ring -->
+        <svg class="d-shape" width="520" height="520" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%"   stop-color="#3b34a5"/>
+              <stop offset="25%"  stop-color="#6d28d9"/>
+              <stop offset="50%"  stop-color="#14b8a6"/>
+              <stop offset="75%"  stop-color="#86efac"/>
+              <stop offset="100%" stop-color="#d946ef"/>
+            </linearGradient>
+            <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="10"/></filter>
+          </defs>
+          <g transform="translate(260,260)">
+            <path d="M 160 0 C 160 88 88 160 0 160 C -88 160 -160 88 -160 0 C -160 -88 -88 -160 0 -160 C 88 -160 160 -88 160 0 Z M 120 0 C 120 -66 66 -120 0 -120 C -66 -120 -120 -66 -120 0 C -120 66 -66 120 0 120 C 66 120 120 66 120 0 Z" fill="url(#grad1)" fill-opacity="0.8"/>
+            <path d="M 140 0 C 140 77 77 140 0 140 C -77 140 -140 77 -140 0 C -140 -77 -77 -140 0 -140 C 77 -140 140 -77 140 0 Z M 100 0 C 100 -55 55 -100 0 -100 C -55 -100 -100 -55 -100 0 C -100 55 -55 100 0 100 C 55 100 100 55 100 0 Z" fill="url(#grad1)" fill-opacity="0.35"/>
+            <circle cx="0" cy="0" r="92" fill="none" stroke="url(#grad1)" stroke-width="8" filter="url(#soft)"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="container">
+        <span class="pill">Boutique • Australia • Cross-continental</span>
+        <h1>AI & Digital Transformation for Entrepreneurs & SMEs</h1>
+        <p><strong>IMSG</strong> helps organisations modernise operations, adopt AI responsibly, and deliver projects with confidence — across <strong>healthcare</strong>, <strong>education</strong>, <strong>food</strong>, and <strong>construction</strong>.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#contact">Book a consultation</a>
+          <a class="btn secondary" href="#services">See what we do</a>
+        </div>
+
+        <div class="spacer-16"></div>
+<div class="grid cards-3">
+  <!-- Card 1 -->
+  <div class="card">
+    <div class="icon t-teal"></div>
+    <span class="badge">Why Us</span>
+    <h3>SME-Focused</h3>
+    <p>Tailored strategies with measurable outcomes — simple, transparent, and built for clear ROI.</p>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <div class="icon t-magenta"></div>
+    <span class="badge">Edge</span>
+    <h3>AI-Driven</h3>
+    <p>We harness the power of AI to automate workflows, uncover insights, and deliver tangible business value — fast.</p>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <div class="icon t-indigo"></div>
+    <span class="badge">Global</span>
+    <h3>Cross-Border Expertise</h3>
+    <p>Bridging Continents — enabling ventures to scale across markets with context, compliance, and confidence.</p>
+  </div>
+</div>
+
+      </div>
+    </section>
+
+  <section id="services">
+  <div class="container">
+    <h2 class="section-title">Services</h2>
+    <p class="section-sub">
+      We help organisations modernise, adopt AI responsibly, and deliver measurable results — through pragmatic, outcome-driven consulting.
+    </p>
+
+    <div class="grid cards-3">
+
+      <!-- Service 1 -->
+      <div class="card">
+        <div class="icon t-teal"></div>
+        <h3>Digital Transformation</h3>
+        <ul class="list">
+          <li><span class="tick">✓</span><span>Process mapping and automation of key workflows</span></li>
+          <li><span class="tick">✓</span><span>Technology selection, integration, and capability uplift</span></li>
+          <li><span class="tick">✓</span><span>Change management and measurable efficiency gains</span></li>
+        </ul>
+        <p style="margin-top:12px;color:var(--muted);font-size:16px;">
+          We turn digital ambitions into working systems that reduce cost, improve experience, and deliver clear ROI.
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="card">
+        <div class="icon t-magenta"></div>
+        <h3>AI Adoption Strategy</h3>
+        <ul class="list">
+          <li><span class="tick">✓</span><span>Identify high-impact use cases and ethical guardrails</span></li>
+          <li><span class="tick">✓</span><span>Rapid prototyping and pilot delivery within weeks</span></li>
+          <li><span class="tick">✓</span><span>AI literacy, policy, and governance frameworks</span></li>
+        </ul>
+        <p style="margin-top:12px;color:var(--muted);font-size:16px;">
+          We help teams build trust in AI — from discovery to pilot — ensuring every step links back to business value.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="card">
+        <div class="icon t-indigo"></div>
+        <h3>AI-Enabled Project Management</h3>
+        <ul class="list">
+          <li><span class="tick">✓</span><span>PMO setup, reporting dashboards, and automation</span></li>
+          <li><span class="tick">✓</span><span>Data-driven cost, risk, and schedule control</span></li>
+          <li><span class="tick">✓</span><span>Vendor and stakeholder alignment powered by insight</span></li>
+        </ul>
+        <p style="margin-top:12px;color:var(--muted);font-size:16px;">
+          We blend project discipline with AI intelligence — enabling faster delivery, better visibility, and stronger ROI.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <section id="industries" class="about">
+      <div class="container">
+        <h2 class="section-title">Industries</h2>
+        <p class="section-sub">Focused domains where we move fast with context.</p>
+        <div class="grid cards-4">
+          <div class="card"><div class="icon t-magenta"></div><h3>Healthcare</h3><p>Patient access, admin automation, compliance-aware AI.</p></div>
+          <div class="card"><div class="icon t-purple"></div><h3>Education</h3><p>Learning analytics, content workflows, safe AI in classrooms.</p></div>
+          <div class="card"><div class="icon t-mint"></div><h3>Food</h3><p>Recipe costing, inventory, HACCP, multi-site dashboards.</p></div>
+          <div class="card"><div class="icon t-teal"></div><h3>Construction</h3><p>Docs-to-data, scheduling, field reporting, digital twins.</p></div>
+        </div>
+      </div>
+    </section>
+
+<!-- === How We Help You === -->
+<section id="approach" class="about">
+  <div class="container">
+    <h2 class="section-title">How We Help You</h2>
+    <p class="section-sub">
+      We make innovation measurable — guiding you from idea to implementation in clear, data-backed stages that demonstrate real progress and tangible ROI.
+    </p>
+
+    <!-- 4-Stage Timeline -->
+    <div class="grid cards-4">
+      <div class="card">
+        <span class="badge" style="color:var(--indigo)">Week 0–1</span>
+        <h3>Discover</h3>
+        <p>We define goals, map challenges, and uncover high-impact opportunities for quick wins.</p>
+      </div>
+      <div class="card">
+        <span class="badge" style="color:var(--purple)">Week 2–3</span>
+        <h3>Design</h3>
+        <p>We co-create a pilot roadmap — with success metrics, risk guardrails, and a value-first approach.</p>
+      </div>
+      <div class="card">
+        <span class="badge" style="color:var(--teal)">Week 4–6</span>
+        <h3>Deliver</h3>
+        <p>We build and launch your pilot, integrate minimally, and measure early indicators of ROI.</p>
+      </div>
+      <div class="card">
+        <span class="badge" style="color:var(--magenta)">Week 6+</span>
+        <h3>Upskill</h3>
+        <p>We train your team, refine processes, and create a foundation for sustainable AI adoption.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- === Connecting Line: From Process to ROI === -->
+<section id="approach-flow" style="background:var(--surface);padding:30px 0;">
+  <div class="container" style="text-align:center;">
+    <svg width="100%" height="80" viewBox="0 0 1000 80" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <linearGradient id="approachFlowGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#14b8a6"/>
+          <stop offset="35%" stop-color="#6d28d9"/>
+          <stop offset="70%" stop-color="#d946ef"/>
+          <stop offset="100%" stop-color="#86efac"/>
+        </linearGradient>
+      </defs>
+
+      <path d="M50,40 C300,60 700,20 950,40"
+            fill="none" stroke="url(#approachFlowGrad)"
+            stroke-width="4" stroke-linecap="round"
+            stroke-dasharray="10 12">
+        <animate attributeName="stroke-dashoffset"
+                 from="0" to="-120" dur="6s"
+                 repeatCount="indefinite"/>
+      </path>
+
+      <text x="500" y="70" text-anchor="middle"
+            font-family="Inter,sans-serif"
+            font-size="14" fill="#475569">
+        from discovery to impact
+      </text>
+    </svg>
+  </div>
+</section>
+
+<!-- === Pilot Impact & ROI === -->
+<section id="targets">
+  <div class="container">
+    <h2 class="section-title">Pilot Impact & ROI</h2>
+    <p class="section-sub">
+      Each 6-week pilot is designed to prove measurable value — reducing cost, automating processes, and building confidence in scale-ready results.
+    </p>
+
+    <div class="ring-grid">
+      <div class="ring">
+        <svg class="donut" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+          <circle class="track" cx="110" cy="110" r="84" stroke-width="26" fill="none"/>
+          <circle cx="110" cy="110" r="84" stroke="var(--indigo)" stroke-width="26" fill="none"
+                  stroke-linecap="butt" stroke-dasharray="95 432"
+                  transform="rotate(-90 110 110)"/>
+          <circle cx="110" cy="110" r="84" stroke="var(--purple)" stroke-width="26" fill="none"
+                  stroke-linecap="butt" stroke-dasharray="95 432" stroke-dashoffset="-105"
+                  transform="rotate(-90 110 110)"/>
+          <circle cx="110" cy="110" r="84" stroke="var(--teal)" stroke-width="26" fill="none"
+                  stroke-linecap="butt" stroke-dasharray="95 432" stroke-dashoffset="-210"
+                  transform="rotate(-90 110 110)"/>
+          <circle cx="110" cy="110" r="84" stroke="#86efac" stroke-width="26" fill="none"
+                  stroke-linecap="butt" stroke-dasharray="95 432" stroke-dashoffset="-315"
+                  transform="rotate(-90 110 110)"/>
+          <circle cx="110" cy="110" r="84" stroke="var(--magenta)" stroke-width="26" fill="none"
+                  stroke-linecap="butt" stroke-dasharray="95 432" stroke-dashoffset="-420"
+                  transform="rotate(-90 110 110)"/>
+          <circle cx="110" cy="110" r="54" stroke="#e2e8f0" stroke-width="12" fill="none"/>
+          <text x="110" y="102" text-anchor="middle" font-family="Poppins, Inter, sans-serif"
+                font-size="14" fill="#0f172a">6-Week</text>
+          <text x="110" y="122" text-anchor="middle" font-family="Poppins, Inter, sans-serif"
+                font-size="14" fill="#0f172a">Pilot Cycle</text>
+        </svg>
+      </div>
+
+<ul class="list kpis">
+  <li><span class="tick">✓</span><span><strong data-target="5">0</strong>–<strong data-target="15">15</strong>% reduction in operating cost</span></li>
+  <li><span class="tick">✓</span><span><strong data-target="50">0</strong>% of manual steps automated</span></li>
+  <li><span class="tick">✓</span><span><strong data-target="90">0</strong>% user adoption during pilot</span></li>
+  <li><span class="tick">✓</span><span><strong data-target="8">0</strong>% incremental revenue growth</span></li>
+  <li><span class="tick">✓</span><span>ROI metrics validated within <strong data-target="6">0</strong> weeks</span></li>
+</ul>
+
+    </div>
+
+    <p class="badge">
+      Every pilot is designed to validate business value early — so you can scale with confidence and a clear return on innovation.
+    </p>
+  </div>
+</section>
+
+<!-- === IMSG Venture Innovation Platform (VIP) — Unified Section === -->
+<!-- === IMSG Venture Innovation Platform (VIP) — Simplified Interactive Visual === -->
+<section id="vip-visual" class="about" style="padding-top:60px;padding-bottom:60px;">
+  <div class="container" style="text-align:center;">
+    <h2 class="section-title">IMSG Venture Innovation Platform (VIP)</h2>
+
+    <p class="section-sub" style="max-width:720px;margin:auto;color:#0f766e;font-size:18px;font-weight:500;">
+      <em>We believe that everything begins with 
+        <span style="color:#d946ef;font-weight:600;text-shadow:0 0 6px rgba(217,70,239,0.6);">
+          Innovation
+        </span> — the courage to imagine, the discipline to prototype, 
+        and the wisdom to scale what truly works.
+      </em>
+    </p>
+
+    <p style="max-width:760px;margin:24px auto 36px;color:#334155;font-size:18px;line-height:1.7;">
+      <strong>You deserve more than just a lab —</strong> this is a living platform where 
+      <em>engineering meets product strategy</em>, connecting entrepreneurs, engineers, partners, 
+      and investors into a rhythm of continuous innovation.
+    </p>
+
+    <div class="vip-container" style="position:relative;max-width:960px;margin:auto;">
+      <svg id="vipMap" viewBox="0 0 1000 520" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="vipGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#14b8a6"/>
+            <stop offset="35%" stop-color="#6d28d9"/>
+            <stop offset="70%" stop-color="#d946ef"/>
+            <stop offset="100%" stop-color="#86efac"/>
+          </linearGradient>
+          <filter id="vipGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- Dual Tracks -->
+        <path d="M50,260 C220,160 380,160 500,260" fill="none" stroke="url(#vipGrad)" stroke-width="8" stroke-linecap="round"
+              stroke-dasharray="10 12">
+          <animate attributeName="stroke-dashoffset" from="0" to="-120" dur="6s" repeatCount="indefinite"/>
+        </path>
+        <path d="M500,260 C620,360 780,360 950,260" fill="none" stroke="url(#vipGrad)" stroke-width="8" stroke-linecap="round"
+              stroke-dasharray="10 12">
+          <animate attributeName="stroke-dashoffset" from="0" to="120" dur="6s" repeatCount="indefinite"/>
+        </path>
+
+        <!-- Core -->
+        <circle cx="500" cy="260" r="22" fill="url(#vipGrad)" filter="url(#vipGlow)">
+          <animate attributeName="r" values="21;23;21" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <text x="500" y="295" text-anchor="middle" font-family="Poppins,Inter,sans-serif" font-size="15" fill="#0f172a" font-weight="700">IMSG</text>
+        <text x="500" y="315" text-anchor="middle" font-family="Poppins,Inter,sans-serif" font-size="14" fill="#475569">Venture Innovation Platform</text>
+        <text x="500" y="335" text-anchor="middle" font-family="Poppins,Inter,sans-serif" font-size="13" fill="#475569" font-style="italic">(VIP)</text>
+
+        <!-- Labels Left / Right -->
+        <text x="200" y="220" text-anchor="middle" font-family="Inter,sans-serif" font-size="15" fill="#14b8a6" font-weight="600">
+          Venture Build
+        </text>
+        <text x="200" y="238" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" fill="#475569" font-style="italic">
+          (Engineering / Prototyping)
+        </text>
+
+        <text x="800" y="300" text-anchor="middle" font-family="Inter,sans-serif" font-size="15" fill="#d946ef" font-weight="600">
+          Venture Launch
+        </text>
+        <text x="800" y="318" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" fill="#475569" font-style="italic">
+          (Product Management)
+        </text>
+
+        <!-- Persona icons (emoji fallback) -->
+        <text x="120" y="200" font-size="26" text-anchor="middle">💡</text>
+        <text x="300" y="160" font-size="26" text-anchor="middle">⚙️</text>
+        <text x="700" y="360" font-size="26" text-anchor="middle">🤝</text>
+        <text x="880" y="260" font-size="26" text-anchor="middle">💰</text>
+
+        <!-- Persona labels -->
+        <text x="120" y="230" text-anchor="middle" font-size="13" fill="#475569">Entrepreneur</text>
+        <text x="300" y="190" text-anchor="middle" font-size="13" fill="#475569">Engineer</text>
+        <text x="700" y="390" text-anchor="middle" font-size="13" fill="#475569">Partner</text>
+        <text x="880" y="290" text-anchor="middle" font-size="13" fill="#475569">Investor</text>
+
+        <!-- Moat ring -->
+        <circle cx="500" cy="260" r="180" fill="none" stroke="#e2e8f0" stroke-width="14"/>
+        <text x="500" y="80" text-anchor="middle" font-size="20">🧱</text>
+        <text x="500" y="105" text-anchor="middle" font-size="13" fill="#475569">System Moat</text>
+        <text x="350" y="110" text-anchor="middle" font-size="20">📚</text>
+        <text x="350" y="135" text-anchor="middle" font-size="13" fill="#475569">Knowledge Moat</text>
+        <text x="650" y="410" text-anchor="middle" font-size="20">🔒</text>
+        <text x="650" y="435" text-anchor="middle" font-size="13" fill="#475569">Trust Moat</text>
+        <text x="500" y="440" text-anchor="middle" font-size="20">🌐</text>
+        <text x="500" y="465" text-anchor="middle" font-size="13" fill="#475569">Network Moat</text>
+      </svg>
+
+      <p style="margin-top:24px;font-size:15px;color:#475569;">
+        <strong>Build → Launch → Scale</strong> — A seamless ecosystem where ideas evolve, moats strengthen, and ventures grow.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- === /VIP Section === -->
+
+<style>
+#vip-visual svg text { font-family: Inter, sans-serif; }
+#vip-visual circle { transition: r 0.3s ease; }
+#vip-visual svg { max-width:100%; height:auto; }
+@media (max-width:700px){
+  #vip-visual svg{height:320px}
+  #vip-visual text{font-size:12px}
+}
+</style>
+<section id="vip" class="about">
+  <div class="container" style="text-align:center;">
+
+    <!-- Title -->
+    <h2 class="section-title">IMSG Venture Innovation Platform (VIP)</h2>
+
+    <!-- Core belief statement -->
+    <p class="section-sub" style="max-width:780px;margin:auto;color:#0f766e;font-size:18px;font-weight:500;">
+      <em>We believe that everything begins with 
+        <span style="color:#d946ef;font-weight:600;text-shadow:0 0 6px rgba(217,70,239,0.6);">
+          Innovation
+        </span> — the courage to imagine, the discipline to prototype, 
+        and the wisdom to scale what truly works.
+      </em>
+    </p>
+
+    <!-- User-focused synthesis statement -->
+    <p style="max-width:760px;margin:24px auto 36px;color:#334155;font-size:18px;line-height:1.7;">
+      <strong>You deserve more than just a lab —</strong> this is a living platform where 
+      <em>engineering meets product strategy</em>, and where entrepreneurs, investors, and innovators 
+      collaborate to turn ideas into ventures with purpose, precision, and momentum.
+    </p>
+
+    <!-- === Dual-Engine Figure === -->
+    <svg width="100%" height="280" viewBox="0 0 1000 280" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <linearGradient id="dualGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#14b8a6"/>
+          <stop offset="35%" stop-color="#6d28d9"/>
+          <stop offset="70%" stop-color="#d946ef"/>
+          <stop offset="100%" stop-color="#86efac"/>
+        </linearGradient>
+        <filter id="glowCore" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- Left wave -->
+      <path d="M50,140 C180,40 320,40 500,140"
+            fill="none" stroke="url(#dualGrad)" stroke-width="8" stroke-linecap="round"
+            stroke-dasharray="10 12">
+        <animate attributeName="stroke-dashoffset" from="0" to="-120" dur="5s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Right wave -->
+      <path d="M500,140 C680,240 820,240 950,140"
+            fill="none" stroke="url(#dualGrad)" stroke-width="8" stroke-linecap="round"
+            stroke-dasharray="10 12">
+        <animate attributeName="stroke-dashoffset" from="0" to="120" dur="5s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Core node -->
+      <circle cx="500" cy="140" r="20" fill="url(#dualGrad)" filter="url(#glowCore)">
+        <animate attributeName="r" values="19;21;19" dur="3s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Core labels -->
+      <text x="500" y="185" text-anchor="middle"
+            font-family="Poppins,Inter,sans-serif" font-size="15" fill="#0f172a" font-weight="600">IMSG</text>
+      <text x="500" y="205" text-anchor="middle"
+            font-family="Poppins,Inter,sans-serif" font-size="14" fill="#475569">Venture Innovation Platform</text>
+      <text x="500" y="225" text-anchor="middle"
+            font-family="Poppins,Inter,sans-serif" font-size="13" fill="#475569" font-style="italic">(VIP)</text>
+
+      <!-- Left label -->
+      <text x="240" y="100" text-anchor="middle"
+            font-family="Inter,sans-serif" font-size="15" fill="#14b8a6" font-weight="600">
+        Venture Build
+      </text>
+      <text x="240" y="118" text-anchor="middle"
+            font-family="Inter,sans-serif" font-size="13" fill="#475569" font-style="italic">
+        (Engineering / Prototyping)
+      </text>
+
+      <!-- Right label -->
+      <text x="760" y="182" text-anchor="middle"
+            font-family="Inter,sans-serif" font-size="15" fill="#d946ef" font-weight="600">
+        Venture Launch
+      </text>
+      <text x="760" y="198" text-anchor="middle"
+            font-family="Inter,sans-serif" font-size="13" fill="#475569" font-style="italic">
+        (Product Management)
+      </text>
+    </svg>
+
+    <!-- Closing line -->
+    <p style="margin-top:28px;font-size:16px;color:#475569;max-width:780px;margin-inline:auto;">
+      Together, these dual engines form the <strong>IMSG Venture Innovation Platform (VIP)</strong> — 
+      a living ecosystem where AI-driven ideas evolve into market-ready ventures. 
+      It’s not just a process; it’s a rhythm of innovation.
+    </p>
+  </div>
+</section>
+
+<!-- === /IMSG Venture Innovation Platform (VIP) Section === -->
+<!-- === Venture Build Section === -->
+<section id="venture-build">
+  <div class="container">
+    <h2 class="section-title">Venture Build <span style="font-size:16px; color:#475569;">(Engineering / Prototyping)</span></h2>
+    <p class="section-sub" style="max-width:720px;">
+      From ideas to intelligent prototypes — <em>Venture Build</em> empowers innovators to rapidly transform concepts into working AI-driven solutions, collaboratively engineered inside the IMSG ecosystem.
+    </p>
+
+    <div class="grid cards-5" style="margin-top:32px; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:20px;">
+      <!-- The Hub -->
+      <div class="card">
+        <div class="icon t-teal"></div>
+        <h3>The Hub</h3>
+        <p>Collaboration & Knowledge — where teams connect, share ideas, and manage insights.</p>
+      </div>
+
+      <!-- The Forge -->
+      <div class="card">
+        <div class="icon t-indigo"></div>
+        <h3>The Forge</h3>
+        <p>Rapid Prototyping — transforming ideas into functional MVPs through AI-assisted development.</p>
+      </div>
+
+      <!-- The Flow -->
+      <div class="card">
+        <div class="icon t-purple"></div>
+        <h3>The Flow</h3>
+        <p>Automation Layer — integrating workflows, data, and API-driven systems to streamline delivery.</p>
+      </div>
+
+      <!-- The Vault -->
+      <div class="card">
+        <div class="icon t-magenta"></div>
+        <h3>The Vault</h3>
+        <p>Governance & IP — protecting assets, ensuring compliance, and maintaining version integrity.</p>
+      </div>
+
+      <!-- The Brain -->
+      <div class="card">
+        <div class="icon t-mint"></div>
+        <h3>The Brain</h3>
+        <p>Intelligence & Insight — leveraging data analytics and AI feedback loops for smarter innovation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === Venture Launch Section === -->
+<section id="venture-launch" class="about">
+  <div class="container">
+    <h2 class="section-title">Venture Launch <span style="font-size:16px; color:#475569;">(Product Management)</span></h2>
+    <p class="section-sub" style="max-width:720px;">
+      Once prototypes are proven, <em>Venture Launch</em> guides founders and investors through validation, funding, and market scaling — creating ventures that last beyond the first pilot.
+    </p>
+
+    <div class="grid cards-5" style="margin-top:32px; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:20px;">
+      <!-- Discovery -->
+      <div class="card">
+        <div class="icon t-teal"></div>
+        <h3>Discovery</h3>
+        <p>User insights & market understanding to define the right problem and opportunity fit.</p>
+      </div>
+
+      <!-- Validation -->
+      <div class="card">
+        <div class="icon t-indigo"></div>
+        <h3>Validation</h3>
+        <p>Real-world testing and user feedback to confirm value, usability, and product-market fit.</p>
+      </div>
+
+      <!-- Funding -->
+      <div class="card">
+        <div class="icon t-purple"></div>
+        <h3>Funding</h3>
+        <p>Investor readiness through storytelling, traction metrics, and financial modeling.</p>
+      </div>
+
+      <!-- Pilot -->
+      <div class="card">
+        <div class="icon t-magenta"></div>
+        <h3>Pilot</h3>
+        <p>Controlled launch to measure real-world impact and refine the product for scale.</p>
+      </div>
+
+      <!-- Scale -->
+      <div class="card">
+        <div class="icon t-mint"></div>
+        <h3>Scale</h3>
+        <p>Automation, partnerships, and systems for sustainable growth and continuous learning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === Connecting Flow Line: Build → Launch === -->
+<section id="vip-flowline" style="background:var(--surface);padding:20px 0 40px;">
+  <div class="container" style="text-align:center;">
+    <svg width="100%" height="80" viewBox="0 0 1000 80" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <linearGradient id="flowGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#14b8a6"/>
+          <stop offset="35%" stop-color="#6d28d9"/>
+          <stop offset="70%" stop-color="#d946ef"/>
+          <stop offset="100%" stop-color="#86efac"/>
+        </linearGradient>
+      </defs>
+
+      <!-- smooth connecting line -->
+      <path d="M50,40 C250,60 750,20 950,40"
+            fill="none" stroke="url(#flowGrad)"
+            stroke-width="5" stroke-linecap="round"
+            stroke-dasharray="12 10">
+        <animate attributeName="stroke-dashoffset"
+                 from="0" to="-120" dur="5s"
+                 repeatCount="indefinite"/>
+      </path>
+
+      <!-- optional labels for context -->
+      <text x="70" y="25" font-family="Inter,sans-serif" font-size="13"
+            fill="#14b8a6" font-weight="600">Build →</text>
+      <text x="910" y="25" font-family="Inter,sans-serif" font-size="13"
+            fill="#d946ef" font-weight="600">→ Launch</text>
+    </svg>
+
+    <p style="margin-top:8px;color:#475569;font-size:15px;">
+      Continuous flow from <strong>Venture Build</strong> to <strong>Venture Launch</strong> — 
+      one seamless journey inside the <em>IMSG Venture Innovation Platform (VIP)</em>.
+    </p>
+  </div>
+</section>
+
+<!-- === /Venture Innovation Platform CANVAS === -->
+
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <p class="section-sub">Australian boutique with global reach.</p>
+        <div class="grid cards-3">
+          <div class="card"><h3>Who we are</h3><p><strong>IMSG</strong> is a boutique consulting firm based in Australia. We exist to democratise high-quality consulting for SMEs.</p></div>
+          <div class="card"><h3>What we believe</h3><p>Technology should serve people. Start simple, measure value, scale what works.</p></div>
+          <div class="card"><h3>Where we work</h3><p>Australia, Middle East, and Africa. We bridge cultures and execution styles.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">Tell us about your goals. We’ll reply within 1 business day.</p>
+        <div class="box">
+          <!-- Minimal mailto fallback; replace with your form handler when ready -->
+<form action="mailto:info@imsg.com.au" method="post" enctype="text/plain">
+  <div class="grid" style="grid-template-columns:1fr 1fr; gap:12px">
+    <div>
+      <label for="name">Your name</label>
+      <input id="name" name="Name" required placeholder="Full Name" />
+    </div>
+    <div>
+      <label for="company">Company</label>
+      <input id="company" name="Company" placeholder="Company Name" />
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input id="email" type="email" name="Email" required placeholder="you@company.com" />
+    </div>
+    <div>
+      <label for="country">Country</label>
+<select id="country" name="Country">
+  <option value="" selected>Select a country</option>
+</select>
+
+    </div>
+
+    <div>
+      <label for="industry">Industry</label>
+<select id="industry" name="Industry">
+  <option value="" selected>Choose an industry</option>
+  <option>Healthcare</option>
+  <option>Education</option>
+  <option>Food</option>
+  <option>Construction</option>
+  <option>Other</option>
+</select>
+    </div>
+    <div>
+      <label for="orgsize">Company size</label>
+
+<select id="orgsize" name="Organisation size">
+  <option value="" selected>Pick a size</option>
+  <option>1–10</option>
+  <option>11–50</option>
+  <option>51–200</option>
+  <option>201–1,000</option>
+  <option>1,001+</option>
+</select>
+    </div>
+
+    <div>
+      <label for="service">Service</label>
+<select id="service" name="Service">
+  <option value="" selected>What are you after?</option>
+  <option>Digital Transformation</option>
+  <option>AI Adoption Strategy</option>
+  <option>AI-Enabled Project Management</option>
+  <option>Not sure — need advice</option>
+</select>
+    </div>
+  </div>
+
+  <label for="msg">What do you want to achieve?</label>
+  <textarea id="msg" name="Message" placeholder="A sentence about the problem and desired outcome..."></textarea>
+
+  <div class="spacer-16"></div>
+  <button class="btn primary" type="submit">Send</button>
+  <span style="margin-left:10px" class="badge">or email <a href="mailto:TODO:EMAIL">info@imsg.com.au</a></span>
+</form>
+        </div>
+        <p class="section-sub">Address: <strong>Sydney, Australia</strong> • LinkedIn: <a href="https://www.linkedin.com/in/mohammed-h-s-ahmed-0b1837a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" rel="me noopener">Connect</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot-grid">
+      <div>© <span id="y"></span> <strong>IMSG</strong>. All rights reserved.</div>
+      <div>Made with care in Australia.</div>
+    </div>
+  </footer>
+
+<script>
+  // Make optional selects show grey until a real value is picked
+  document.querySelectorAll('.contact select').forEach(sel => {
+    const grey = '#94a3b8', normal = getComputedStyle(document.documentElement)
+                    .getPropertyValue('--text').trim() || '#0f172a';
+    function paint(){ sel.style.color = sel.value ? normal : grey; }
+    paint(); sel.addEventListener('change', paint);
+  });
+</script>
+<script>
+(function () {
+  // 1) Populate the Country dropdown
+  var countryEl = document.getElementById('country');
+  if (countryEl) {
+    var countries = "Afghanistan|Åland Islands|Albania|Algeria|American Samoa|Andorra|Angola|Anguilla|Antarctica|Antigua and Barbuda|Argentina|Armenia|Aruba|Australia|Austria|Azerbaijan|Bahamas|Bahrain|Bangladesh|Barbados|Belarus|Belgium|Belize|Benin|Bermuda|Bhutan|Bolivia (Plurinational State of)|Bonaire, Sint Eustatius and Saba|Bosnia and Herzegovina|Botswana|Bouvet Island|Brazil|British Indian Ocean Territory|Brunei Darussalam|Bulgaria|Burkina Faso|Burundi|Cabo Verde|Cambodia|Cameroon|Canada|Cayman Islands|Central African Republic|Chad|Chile|China|Christmas Island|Cocos (Keeling) Islands|Colombia|Comoros|Congo|Congo, Democratic Republic of the|Cook Islands|Costa Rica|Côte d’Ivoire|Croatia|Cuba|Curaçao|Cyprus|Czechia|Denmark|Djibouti|Dominica|Dominican Republic|Ecuador|Egypt|El Salvador|Equatorial Guinea|Eritrea|Estonia|Eswatini|Ethiopia|Falkland Islands (Malvinas)|Faroe Islands|Fiji|Finland|France|French Guiana|French Polynesia|French Southern Territories|Gabon|Gambia|Georgia|Germany|Ghana|Gibraltar|Greece|Greenland|Grenada|Guadeloupe|Guam|Guatemala|Guernsey|Guinea|Guinea-Bissau|Guyana|Haiti|Heard Island and McDonald Islands|Holy See|Honduras|Hong Kong|Hungary|Iceland|India|Indonesia|Iran (Islamic Republic of)|Iraq|Ireland|Isle of Man|Israel|Italy|Jamaica|Japan|Jersey|Jordan|Kazakhstan|Kenya|Kiribati|Korea (Democratic People’s Republic of)|Korea, Republic of|Kuwait|Kyrgyzstan|Lao People’s Democratic Republic|Latvia|Lebanon|Lesotho|Liberia|Libya|Liechtenstein|Lithuania|Luxembourg|Macao|Madagascar|Malawi|Malaysia|Maldives|Mali|Malta|Marshall Islands|Martinique|Mauritania|Mauritius|Mayotte|Mexico|Micronesia (Federated States of)|Moldova, Republic of|Monaco|Mongolia|Montenegro|Montserrat|Morocco|Mozambique|Myanmar|Namibia|Nauru|Nepal|Netherlands|New Caledonia|New Zealand|Nicaragua|Niger|Nigeria|Niue|Norfolk Island|North Macedonia|Northern Mariana Islands|Norway|Oman|Pakistan|Palau|Palestine, State of|Panama|Papua New Guinea|Paraguay|Peru|Philippines|Pitcairn|Poland|Portugal|Puerto Rico|Qatar|Réunion|Romania|Russian Federation|Rwanda|Saint Barthélemy|Saint Helena, Ascension and Tristan da Cunha|Saint Kitts and Nevis|Saint Lucia|Saint Martin (French part)|Saint Pierre and Miquelon|Saint Vincent and the Grenadines|Samoa|San Marino|São Tomé and Príncipe|Saudi Arabia|Senegal|Serbia|Seychelles|Sierra Leone|Singapore|Sint Maarten (Dutch part)|Slovakia|Slovenia|Solomon Islands|Somalia|South Africa|South Georgia and the South Sandwich Islands|South Sudan|Spain|Sri Lanka|Sudan|Suriname|Svalbard and Jan Mayen|Sweden|Switzerland|Syrian Arab Republic|Taiwan|Tajikistan|Tanzania, United Republic of|Thailand|Timor-Leste|Togo|Tokelau|Tonga|Trinidad and Tobago|Tunisia|Türkiye|Turkmenistan|Turks and Caicos Islands|Tuvalu|Uganda|Ukraine|United Arab Emirates|United Kingdom|United States|United States Minor Outlying Islands|Uruguay|Uzbekistan|Vanuatu|Venezuela (Bolivarian Republic of)|Viet Nam|Virgin Islands (British)|Virgin Islands (U.S.)|Wallis and Futuna|Western Sahara|Yemen|Zambia|Zimbabwe".split("|");
+    countries.forEach(function (name) {
+      countryEl.add(new Option(name, name));
+    });
+  }
+
+  // 2) Keep ALL dropdowns grey until a real choice is made (optional selects)
+  var root = getComputedStyle(document.documentElement);
+  var grey = (root.getPropertyValue('--phGrey') || '#94a3b8').trim();
+  var normal = (root.getPropertyValue('--text') || '#0f172a').trim();
+  document.querySelectorAll('.contact select').forEach(function (sel) {
+    function paint(){ sel.style.color = sel.value ? normal : grey; }
+    paint();
+    sel.addEventListener('change', paint);
+  });
+})();
+</script>
+<!-- === Smooth Scroll for Navigation Links === -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId.length > 1 && document.querySelector(targetId)) {
+        e.preventDefault();
+        document.querySelector(targetId).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
+
+<!-- === Active Menu Link Tracking === -->
+<script>
+  // Detect sections as user scrolls and update nav highlight
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const top = section.offsetTop - 100;
+      const height = section.clientHeight;
+      if (scrollY >= top && scrollY < top + height) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+<!-- === Mobile Nav Toggle Script === -->
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      toggle.textContent = menu.classList.contains('active') ? '✕' : '☰';
+    });
+  }
+</script>
+<!-- === Animated KPI Counters === -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".kpis strong[data-target]");
+  let started = false;
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      const duration = 1800; // total animation duration (ms)
+      const stepTime = 30;   // update interval
+      let current = 0;
+      const increment = target / (duration / stepTime);
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        counter.textContent = Math.round(current);
+      }, stepTime);
+    });
+  };
+
+  // trigger when section is visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !started) {
+        started = true;
+        animateCounters();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const targetSection = document.querySelector("#targets");
+  if (targetSection) observer.observe(targetSection);
+});
+</script>
+
+
+</body>
+</html>
